@@ -6,8 +6,12 @@ using namespace std;
 int main() {
   
   string P;
+  int entrar;
+  cout <<" digite 1 para entrar no programa" << endl ;
+  cin >> entrar;
 
-  cout << " Digite uma palavra de no maximo 50 letras" << endl;
+  while( entrar == 1){
+  cout << " Digite uma palavra de no maximo 50 letras minusculas" << endl;
   cin >> P;
 
   if (P.length() > 49){
@@ -95,6 +99,10 @@ int main() {
     }
 
 
+  }
+   
+   cout << " Se deseja digitar outra palavra Digite 1 , para sair digite qualquer outro numero" << endl;
+   cin >> entrar;
   }
 
 
