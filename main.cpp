@@ -2,15 +2,10 @@
 #include <string>
 
 using namespace std;
+string P;
+int entrar;
 
-int main() {
-  
-  string P;
-  int entrar;
-  cout <<" digite 1 para entrar no programa" << endl ;
-  cin >> entrar;
-
-  while( entrar == 1){
+void DigitarPalavra(){
   cout << " Digite uma palavra de no maximo 50 letras minusculas" << endl;
   cin >> P;
 
@@ -19,18 +14,12 @@ int main() {
     P.erase(49);
   }
   cout << "A palavra digitada é : " << P << endl;
+}
 
-  for (int i =0; i < P.length(); i++){
+void ImprimirTeclas(){
+   for (int i =0; i < P.length(); i++){
 
-    if(P[i] == 'a'){
-      cout << "#2=1"<< endl;
-    }else if (P[i] == 'b'){
-      cout<<"#2=2"<< endl;
-    }else if (P[i] == 'c'){
-      cout<<"#2=3"<< endl;
-    }
-
-    if(P[i] == 'a' ){
+   if(P[i] == 'a' ){
       cout << "#2=1"<< endl;
     }else if (P[i] == 'b'){
       cout<<"#2=2"<< endl;
@@ -97,13 +86,21 @@ int main() {
     }else if( P[i] == 'z'){
       cout << "#9=4" << endl;
     }
-
-
   }
+}
+
+int main() {
    
+  cout <<" digite 1 para entrar no programa" << endl ;
+  cin >> entrar;
+
+  while( entrar == 1){
+
+     DigitarPalavra();
+     ImprimirTeclas();
+  
    cout << " Se deseja digitar outra palavra Digite 1 , para sair digite qualquer outro numero" << endl;
    cin >> entrar;
+    
   }
-
-
 }
